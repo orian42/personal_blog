@@ -21,7 +21,7 @@ function submitNewBlog (event) {
     localStorage.setItem('blogArchive', JSON.stringify(blogArchiveArray));
 
     //redirect to blog.html
-    window.location.href = '../../blog.html';
+    window.location.href = "blog.html";
 }
 
 submitButton.addEventListener ('click', submitNewBlog);
