@@ -4,11 +4,10 @@ const entryContent = document.querySelector('#entryContent');
 const submitButton = document.querySelector('#submitButton');
 
 //get existing blog data
-const blogArchiveArray = new Array;
-if(localStorage.getItem('blogArchive')) {
-    blogArchiveArray.push(JSON.parse(localStorage.getItem('blogArchive')));
+var blogArchive = JSON.parse(localStorage.getItem('blogArchive'));
+if (blogArchive === null) {
+    blogArchive = [];
 }
-
 
 function submitNewBlog (event) {
     event.stopPropagation();
@@ -24,9 +23,8 @@ function submitNewBlog (event) {
         alert('All fields must be completed before submitting your blog entry.');
     } else {
     //add new data to the existing blog data
-    blogArchiveArray.push(newEntryData);
-
-    localStorage.setItem('blogArchive', JSON.stringify(blogArchiveArray));
+    blogArchive.push(newEntryData);
+    localStorage.setItem('blogArchive', JSON.stringify(blogArchive));
 
     //redirect to blog.html
     window.location.href = "blog.html";

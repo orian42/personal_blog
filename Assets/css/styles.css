@@ -8,6 +8,7 @@ mode {
     font-size: 24px;
     display: flex;
     justify-content: right;
+    cursor: pointer;
 }
 
 container {
@@ -20,6 +21,7 @@ container {
 }
 
 blogTitle {
+    color: black;
     background-image: url("../images/yellowcircle.png");
     background-size: cover;
     border-right: double black 10px;
@@ -43,4 +45,43 @@ button {
     height: 48px;
     color: white;
     background-color: black;
+    border: solid white 1px;
+    box-shadow: 5px 2px 2px gray;
+}
+
+/* Dark Mode CSS */
+.dark {
+    color: white;
+    background-color: black;
+}
+
+.dark mode {
+    border-bottom: double white 10px;
+}
+
+.dark container {
+    border-bottom: double white 10px;
+}
+
+.dark blogTitle {
+    border-right: double white 10px;
+}
+
+
+/* Light Mode CSS */
+.light {
+    color: black;
+    background-color: white;
+}
+
+.light mode {
+    border-bottom: double black 10px;
+}
+
+.light container {
+    border-bottom: double black 10px;
+}
+
+.light blogTitle {
+    border-right: double black 10px;
 }
