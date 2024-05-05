@@ -1,127 +1,51 @@
-# 04 Web APIs: Personal Blog
+# Personal Blog
 
-## Your Task
+## Description
 
-In this challenge, you'll create a two-page website where users will input and view blog posts. It includes building a content form, dynamically rendering blog posts, and implementing a light/dark mode toggle. As you code, you'll gain practical JavaScript experience, explore the Document Object Model's power, and set the stage for more advanced tasks.
+### User Story
+The purpose of this application was so that a user (a marketing student in particular for this project) could record their thoughts and experiences in blog entries.  These entries are able to be recalled and read by anyone who had the link to the application.  The user would be able to enter their name, the title of the blog entry, and whatever thoughts or experiences they would like to share.  When entered, the user would be redirected to a page that would list all blog entries recorded thus far displayed in the order in which they were recorded starting with the first entry and ending with the last.  The user would also be able to select a theme for the display of the page itself.  There are two options: a light mode and a dark mode.
 
-## User Story
+### My Student Experience
+From a student perspective, this was a wonderful learning experience for me!  Not only was I able to apply much of what I learned in the past week, I was able to augment my knowledge researching different issues that I wanted to add that were not required by the user story.
 
-```md
-AS A marketing student,
-I WANT a personal blog
-SO THAT I can showcase my thoughts and experiences.
-```
+One of the things I wanted my application to have is that when I selected either light mode or dark mode, I wanted that mode to be stored so that when the user went from one page to another, the mode would remain.  I noticed it was rather jarring to be in dark mode and then get navigated to the other page only to have the light mode jump up.  I wanted more consistency with my application.  I was able to easily accomplish this by storing a second value in the local storage that could be recalled every time one of the pages were loaded and set the corresponding mode correctly.
 
-## Acceptance Criteria
+The user story required that I include an alert if any of the fields were left blank when trying to submit the form.  Rather than a single alert that came up telling the user to finish the form, I wanted a more descriptive alert that would tell the user which form field were blank.  I also wanted that list of fields to be bulleted in the alert itself so it could be easily read.  I had to do some research to learn how to insert line breaks to be able to display this correctly.
 
-```md
-GIVEN a personal blog
-WHEN I load the app,
-THEN I am presented with the landing page containing a form with labels and inputs for username, blog title, and blog content.
-WHEN I submit the form,
-THEN blog post data is stored to localStorage.
-WHEN the form submits,
-THEN I am redirected to the posts page.
-WHEN I enter try to submit a form without a username, title, or content,
-THEN I am presented with a message that prompts me to complete the form.
-WHEN I view the posts page,
-THEN I am presented with a header, with a light mode/dark mode toggle, and a "Back" button.
-WHEN I click the light mode/dark mode toggle,
-THEN the page content's styles update to reflect the selection.
-WHEN I click the "Back" button,
-THEN I am redirected back to the landing page where I can input more blog entries.
-WHEN I view the main content,
-THEN I am presented with a list of blog posts that are pulled from localStorage.
-WHEN I view localStorage,
-THEN I am presented with a JSON array of blog post objects, each including the post author's username, title of the post, and post's content.
-WHEN I take a closer look at a single blog entry in the list,
-THEN I can see the title, the content, and the author of the post.
-WHEN I view the footer,
-THEN I am presented with a link to the developer's portfolio.
-```
+I also picked up some more CSS knowledge!  The linear and radial gradient fills have accented my application rather nicely I think.  I was able to set up two different color schemes with a sunny-feeling light mode and a gloomy-feeling dark mode.  I lined the gradients up so that the switch from light to dark mode appears very clean.
 
-## Getting Started
+## Installation
 
-Your file structure should look like the following:
+N/A
 
-```md
-my-blog
-├── assets
-│   ├── css
-│   │   ├── blog.css
-│   │   ├── form.css
-│   │   └── styles.css
-│   └── js
-│       ├── blog.js
-│       ├── form.js
-│       └── logic.js
-├── index.html
-├── blog.html
-└── README.md
-```
+## Usage
 
-## Mock-Up
+Anyone with the link to the application (https://orian42.github.io/personal_blog/index.html) may use it. It should be noted that this is a student project and should not be regarded as a real-world tool.
 
-The following animation demonstrates the application functionality:
+Begin use by entering the information as appropriate on the home page and click the Submit button to submit the entry.  All fields must be filled in; otherwise, the entry will not be submitted.  Once the entry is submitted, the user will be redirected to the posts page where the user will be able to read all blog entries submitted to date.  From this page, the user can select the back button to return to the home page to submit an additional blog entry.  
 
-![A user adds a blog through a form, then the post appears on the following page.](./Assets/100-web-apis-challenge-demo.gif)
+The user also has the ability to switch the color scheme to either a light mode or dark mode based on the user's preference.  This is done by clicking the sun or moon icon in the upper right corner of either page.  This preference will remain in effect for both pages every time the user visits the page until the mode is switched by the user.
 
-## Grading Requirements
+My portfolio can be viewed by clicking my name at the bottom of the posts page.
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+### The Home Screen
 
-This Challenge is graded based on the following criteria:
+![home screen in light mode](assets/images/screenshot1.png)
 
-### Technical Acceptance Criteria: 40%
+![home screen in dark mode](assets/images/screenshot2.png)
 
-* Satisfies all of the preceding acceptance criteria.
+### The Posts Screen
 
-### Deployment: 32%
+![posts screen in light mode](assets/images/screenshot3.png)
 
-* Application deployed at live URL.
+![posts screen in dark mode](assets/images/screenshot4.png)
 
-* Application loads with no errors.
+## Credits
 
-* Application GitHub URL submitted.
+No other person aided in my creation of this application.
 
-* GitHub repository contains application code.
+Research into additional commands was conducted using multiple websites too numerous to name.
 
-### Application Quality: 15%
+## License
 
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the Challenge instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
-
----
-
-© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+Please refer to the LICENSE in the repo.
