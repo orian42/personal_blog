@@ -1,3 +1,6 @@
+//This file contains the coding for placing the pages of the application
+//in either light or dark mode.  The mode will remain in place even when
+//the user navigates to the other page.
 const container = document.body;
 const changeView = document.querySelector('.viewModeIcon');
 

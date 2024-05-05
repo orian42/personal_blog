@@ -1,3 +1,7 @@
+//The coding in this file is for two functions on the blog.html page:
+//the back button and the population of the archived blog data to the
+//blog.html page
+
 // code for back button
 const backButton = document.querySelector('#backButton');
 
@@ -14,6 +18,7 @@ if (blogArchive === null) {
     blogArchive = [];
 }
 
+//Populate the data to the blog.html page
 for (i=0; i< blogArchive.length; i++) {
     const blogEntries = document.querySelector('#blogEntries');
     const entryContainer = document.createElement('div');
@@ -29,5 +34,4 @@ for (i=0; i< blogArchive.length; i++) {
     entryContainer.querySelector('h2').textContent = `${blogArchive[i].title}`;
     entryContainer.querySelector('p').textContent = `${blogArchive[i].content}`;
     entryContainer.querySelector('p:nth-child(3)').textContent = `Posted by:  ${blogArchive[i].user}`;
-
 }

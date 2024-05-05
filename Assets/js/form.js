@@ -1,14 +1,17 @@
+//The coding in this file allows the user to create a new blog entry.  The new
+//entry appends to the already existing entries in the local storage.
 const userName = document.querySelector('#bloggerName');
 const entryTitle = document.querySelector('#entryTitle');
 const entryContent = document.querySelector('#entryContent');
 const submitButton = document.querySelector('#submitButton');
 
-//get existing blog data
+//get existing blog data from local storage
 var blogArchive = JSON.parse(localStorage.getItem('blogArchive'));
 if (blogArchive === null) {
     blogArchive = [];
 }
 
+//Coding for new blog entries
 function submitNewBlog (event) {
     event.stopPropagation();
 
