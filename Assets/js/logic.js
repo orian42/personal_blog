@@ -1,8 +1,22 @@
 const container = document.body;
 const changeView = document.querySelector('.viewModeIcon');
 
-let viewMode = 'light';
+var viewMode;
 
+//calls stored mode to ensure light/dark mode continues on both pages
+//then switches the page to the stored mode.  Also updates the toggle icon 
+//to the proper one depending on which mode is called.
+window.onload = function() {
+    viewMode = localStorage.getItem('mode');
+    document.body.setAttribute('class', viewMode);
+    if (viewMode === 'dark') {
+        changeView.textContent = '🌙';
+    } else {
+        changeView.textContent = '🔆';
+    }
+}
+
+//changes the mode and icon when the icon is clicked
 function changeDocView (event) {
     event.stopPropagation;
 
@@ -15,6 +29,8 @@ function changeDocView (event) {
         document.body.setAttribute('class', 'light');
         changeView.textContent = '🔆';
     }
+    //saves mode to be displayed when the user navigates to a different page
+    localStorage.setItem('mode', viewMode);
 }
 
 changeView.addEventListener('click', changeDocView);

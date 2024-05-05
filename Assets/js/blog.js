@@ -28,6 +28,6 @@ for (i=0; i< blogArchive.length; i++) {
 
     entryContainer.querySelector('h2').textContent = `${blogArchive[i].title}`;
     entryContainer.querySelector('p').textContent = `${blogArchive[i].content}`;
-    entryContainer.querySelector('p:nth-child(3)').textContent = `${blogArchive[i].user}`;
+    entryContainer.querySelector('p:nth-child(3)').textContent = `Posted by:  ${blogArchive[i].user}`;
 
 }

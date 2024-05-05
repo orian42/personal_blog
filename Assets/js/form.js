@@ -20,7 +20,15 @@ function submitNewBlog (event) {
 
     //ensure completion of the form
     if (userName.value === "" || entryTitle.value === "" || entryContent.value === "") {
-        alert('All fields must be completed before submitting your blog entry.');
+        //identify fields with missing values then list only these items in the alert
+        var missingUser;
+        var missingTitle;
+        var missingContent;
+        if (userName.value === ""){missingUser =' • Username\n'} else {missingUser = ""};
+        if (entryTitle.value === ""){missingTitle =' • Title\n'} else {missingTitle = ""};
+        if (entryContent.value === ""){missingContent =' • Content\n'} else {missingContent = ""};
+        alert('All fields must be completed before submitting your blog entry.\n\nPlease complete the following fields:\n'
+            + missingUser + missingTitle + missingContent);
     } else {
     //add new data to the existing blog data
     blogArchive.push(newEntryData);

@@ -2,6 +2,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+html {
+    border: solid black 15px;
+}
+
 header {
     border-bottom: double black 10px;
     padding: 15px;
@@ -22,12 +26,44 @@ mode {
 }
 
 blogEntries {
-    padding: 15px;;
-    height: 500px;
+    padding: 15px;
+}
+
+div {
+    margin: 15px;
+    border: solid black 3px;
+    background: linear-gradient(180deg,orange,yellow, white,white);
+}
+
+div p:first-of-type {
+    margin-left: 45px;
+    font-style: italic;
+}
+
+div p:nth-of-type(2) {
+    font-weight: bold;
+    margin: 15px;
+    margin-top: 30px;
+}
+
+h2 {
+    margin: 15px;
+    border-bottom: solid black 1px;;
 }
 
 footer {
+    height: 80px;
     border-top: double black 10px;
+    background: linear-gradient(1deg,orange,yellow, white,white);
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
 }
 
 #backButton {
@@ -49,16 +85,30 @@ footer {
 
 /* Dark Mode CSS */
 .dark {
-    color: white;
+    color: rgba(255, 255, 255, 0.438);
     background-color: black;
 }
 
 .dark header {
-    border-bottom: double white 10px;
+    border-bottom: double rgba(255, 255, 255, 0.438) 10px;
 }
 
 .dark footer {
-    border-top: double white 10px;
+    border-top: double rgba(255, 255, 255, 0.438) 10px;
+    background: linear-gradient(1deg,purple,blue, black, black);
+}
+
+.dark div {
+    border: solid rgba(255, 255, 255, 0.438) 3px;
+    background: linear-gradient(180deg,purple,blue, black, black);
+}
+
+.dark h2 {
+    border-bottom: solid rgba(255, 255, 255, 0.438) 1px;
+}
+
+.dark a {
+    color: rgba(255, 255, 255, 0.438);
 }
 
 
@@ -74,4 +124,13 @@ footer {
 
 .light footer {
     border-top: double black 10px;
+    background: linear-gradient(1deg,orange,yellow, white,white);
+}
+
+.light div {
+    border: solid black 3px;
+}
+
+.light h2 {
+    border-bottom: solid black 1px;;
 }
