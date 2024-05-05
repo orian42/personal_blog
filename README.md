@@ -30,15 +30,15 @@ My portfolio can be viewed by clicking my name at the bottom of the posts page.
 
 ### The Home Screen
 
-![home screen in light mode](assets/images/screenshot1.png)
+![home screen in light mode](Assets/images/screenshot1.png)
 
-![home screen in dark mode](assets/images/screenshot2.png)
+![home screen in dark mode](Assets/images/screenshot2.png)
 
 ### The Posts Screen
 
-![posts screen in light mode](assets/images/screenshot3.png)
+![posts screen in light mode](Assets/images/screenshot3.png)
 
-![posts screen in dark mode](assets/images/screenshot4.png)
+![posts screen in dark mode](Assets/images/screenshot4.png)
 
 ## Credits
 
