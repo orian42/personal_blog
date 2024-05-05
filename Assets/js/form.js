@@ -11,6 +11,10 @@ if (blogArchive === null) {
     blogArchive = [];
 }
 
+//Suppress autocomplete
+userName.setAttribute('autocomplete', 'off');
+entryTitle.setAttribute('autocomplete', 'off');
+
 //Coding for new blog entries
 function submitNewBlog (event) {
     event.stopPropagation();
