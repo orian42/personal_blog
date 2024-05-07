@@ -29,7 +29,6 @@ blogTitle {
     color: black;
     background: radial-gradient(orange, yellow, white,white);
     background-size: cover;
-    border-right: double black 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,4 +100,20 @@ button {
 
 .light userInput {
     background: linear-gradient(300deg,orange,yellow, white,white);
+}
+
+@media screen and (max-width: 1150px) {
+    container {
+        flex-direction: column;
+    }
+
+    .dark blogTitle {
+        border-right: none;
+        border-bottom: double rgba(255, 255, 255, 0.438) 10px;
+    }
+
+    .light blogTitle {
+        border-right: none;
+        border-bottom: double black 10px;
+    }
 }
